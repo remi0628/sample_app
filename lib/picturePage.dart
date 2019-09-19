@@ -19,14 +19,14 @@ class _PicturePageState extends State<PicturePage> {
             mainAxisSpacing: 10,
             crossAxisCount: 2,
             children: <Widget>[
-              CardAssetImage('remi'),
+              CardAssetImage(fileName:'assets/remi.jpg'),
               _cardNetWorkImage(),
-              CardAssetImage('1'),
-              CardAssetImage('perfume'),
-              CardAssetImage('4'),
-              CardAssetImage('arupaka'),
-              CardAssetImage('0'),
-              CardAssetImage('2'),
+              CardAssetImage(fileName:'assets/1.jpg'),
+              CardAssetImage(fileName:'assets/perfume.jpg'),
+              CardAssetImage(fileName:'assets/4.jpg'),
+              CardAssetImage(fileName:'assets/arupaka.jpg'),
+              CardAssetImage(fileName:'assets/0.jpg'),
+              CardAssetImage(fileName:'assets/2.jpg'),
             ],
           ),
         ),
@@ -36,8 +36,8 @@ class _PicturePageState extends State<PicturePage> {
 }
 
 class CardAssetImage extends StatelessWidget {
-  final String _picture;
-  CardAssetImage(this._picture);
+  final String fileName;
+  CardAssetImage({this.fileName});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class CardAssetImage extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/$_picture.jpg'),
+            image: AssetImage('$fileName'),
             fit: BoxFit.cover,
           ),
         ),

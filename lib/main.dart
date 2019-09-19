@@ -1,9 +1,8 @@
-import './home_page.dart';
-import './picture_page.dart';
-import './card_page.dart';
+import './homePage.dart';
+import './picturePage.dart';
+import './cardPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/rendering.dart';
 
 void main() => runApp(MyApp());
 
